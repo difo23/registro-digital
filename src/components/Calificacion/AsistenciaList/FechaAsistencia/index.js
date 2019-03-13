@@ -29,3 +29,5 @@ class FechaAsistencia extends React.Component {
         />;
     }
 }
+
+export default FechaAsistencia;

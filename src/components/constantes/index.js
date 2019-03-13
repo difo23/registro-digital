@@ -1,5 +1,5 @@
 
-const LabelEstudentClassName= 'EstudentLabel';
-const LabelEstudentText ='Registro Academico:';
+const TITULO_CLASSNAME= 'EstudentLabel';
+const TITULO_TEXT='Registro Academico:';
 
-export {LabelEstudentClassName, LabelEstudentText};
+export {TITULO_CLASSNAME,TITULO_TEXT};

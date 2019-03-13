@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="81878699-2634-47c8-8a79-197862f7e9e7" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Calificacion/AsistenciaList/FechaAsistencia/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Calificacion/AsistenciaList/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Calificacion/CalificacionCompletiva/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Calificacion/CalificacionExtraordinaria/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Calificacion/CalificacionParcial/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Calificacion/CalificacionSituacionFinalCAP/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/RegistroDigital/Asignatura/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/RegistroDigital/OpcionesTabCalificaciones/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/RegistroDigital/Profesor/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/RegistroDigital/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/constantes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CostantBank/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RegistroComponent/IDComponent/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RegistroDigital/Curso/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RegistroComponent/OptionBotonComponent/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RegistroComponent/OptionComponent/CheckBoxComponent/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RegistroComponent/OptionComponent/LabelComponent/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RegistroComponent/OptionComponent/PeriodoEscolarComponent/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RegistroDigital/PeriodoEscolar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RegistroComponent/OptionComponent/ProgressBarComponent/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RegistroComponent/OptionComponent/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RegistroComponent/PorcentComponent/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RegistroComponent/index.js" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>div</find>
+      <find>for</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/components/registroDigital/OptionBotonComponent</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="lizandro.ramirez@ucateci.edu.do" />
+        <option value="difo23" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Calificaciones" />
+      </map>
+    </option>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="master" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="difo23" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="RegistroDigital" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/components/EstudentComponent/OptionComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/components/RegistroComponent/OptionComponent/OptionBotonComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/components/RegistroComponent/IDComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/components/RegistroComponent/OptionComponent/ProgressBarComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/components/RegistroComponent/OptionComponent/PeriodoEscolarComponet/index.js" />
+        <option value="$PROJECT_DIR$/src/components/RegistroComponent/OptionComponent/PeriodoEscolarComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/components/RegistroComponent/PorcentComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/components/RegistroComponent/AsignaturaComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/components/RegistroComponent/OptionComponent/LabelComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/components/RegistroComponent/OptionComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/components/CostantBank/index.js" />
+        <option value="$PROJECT_DIR$/src/components/CalificacionComponent/SearchComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/components/CalificacionComponent/EditableRowComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/components/RegistroComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/components/CalificacionComponent/CalificacionRowComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/components/CalificacionComponent/TablaCalificacionComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/components/CalificacionComponent/CalificationRowComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/components/RegistroComponent/ProfesorComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/components/RegistroComponent/OptionBotonComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/components/CalificacionComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/components/registroDigital/OptionBotonComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/components/registroDigital/OptionComponent/PeriodoEscolarComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/components/registroDigital/OptionComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/components/registroDigital/asignatura/index.js" />
+        <option value="$PROJECT_DIR$/src/components/registroDigital/curso/index.js" />
+        <option value="$PROJECT_DIR$/src/components/registroDigital/periodoEscolar/index.js" />
+        <option value="$PROJECT_DIR$/src/components/constantes/index.js" />
+        <option value="$PROJECT_DIR$/src/components/registroDigital/tituloApp/index.js" />
+        <option value="$PROJECT_DIR$/src/components/registroDigital/index.js" />
+        <option value="$PROJECT_DIR$/src/components/registroDigital/opcionesTabCalificaciones/index.js" />
+        <option value="$PROJECT_DIR$/src/components/registroDigital/profesor/index.js" />
+        <option value="$PROJECT_DIR$/src/components/registroDigital/Asignatura/index.js" />
+        <option value="$PROJECT_DIR$/src/components/registroDigital/Curso/index.js" />
+        <option value="$PROJECT_DIR$/src/components/registroDigital/OpcionesTabCalificaciones/index.js" />
+        <option value="$PROJECT_DIR$/src/components/registroDigital/Profesor/index.js" />
+        <option value="$PROJECT_DIR$/src/components/registroDigital/TituloApp/index.js" />
+        <option value="$PROJECT_DIR$/src/components/calificacion/CalificacionParcial/index.js" />
+        <option value="$PROJECT_DIR$/src/components/RegistroDigital/index.js" />
+        <option value="$PROJECT_DIR$/src/App.css" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/components/Calificacion/CalificacionParcialTabla/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Calificacion/CalificacionCompletivaTabla/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Calificacion/AsistenciaList/Fecha/index.js" />
+        <option value="$PROJECT_DIR$/src/components/RegistroDigital/OpcionesTabCalificaciones/FechaAsistencia/index.js" />
+        <option value="$PROJECT_DIR$/src/components/RegistroDigital/OpcionesTabCalificaciones/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Calificacion/AsistenciaList/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Calificacion/CalificacionCompletiva/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Calificacion/CalificacionSituacionFinalCAP/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Calificacion/CalificacionExtraordinaria/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Calificacion/AsistenciaList/FechaAsistencia/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Calificacion/CalificacionParcial/index.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1920" />
+    <option name="y" value="308" />
+    <option name="width" value="1366" />
+    <option name="height" value="772" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="frontregistrodigital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontregistrodigital" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontregistrodigital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontregistrodigital" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontregistrodigital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontregistrodigital" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontregistrodigital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontregistrodigital" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Calificacion" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontregistrodigital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontregistrodigital" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Calificacion" type="462c0819:PsiDirectoryNode" />
+              <item name="AsistenciaList" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontregistrodigital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontregistrodigital" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Calificacion" type="462c0819:PsiDirectoryNode" />
+              <item name="AsistenciaList" type="462c0819:PsiDirectoryNode" />
+              <item name="FechaAsistencia" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontregistrodigital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontregistrodigital" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Calificacion" type="462c0819:PsiDirectoryNode" />
+              <item name="CalificacionCompletiva" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontregistrodigital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontregistrodigital" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Calificacion" type="462c0819:PsiDirectoryNode" />
+              <item name="CalificacionExtraordinaria" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontregistrodigital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontregistrodigital" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Calificacion" type="462c0819:PsiDirectoryNode" />
+              <item name="CalificacionParcial" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontregistrodigital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontregistrodigital" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Calificacion" type="462c0819:PsiDirectoryNode" />
+              <item name="CalificacionSituacionFinalCAP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontregistrodigital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontregistrodigital" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="RegistroDigital" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontregistrodigital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontregistrodigital" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="RegistroDigital" type="462c0819:PsiDirectoryNode" />
+              <item name="OpcionesTabCalificaciones" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="frontregistrodigital" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontregistrodigital" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="RegistroDigital" type="462c0819:PsiDirectoryNode" />
+              <item name="Profesor" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/nodeApiRestExample" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Calificacion/AsistenciaList" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/components/registroDigital" />
+      <recent name="$PROJECT_DIR$/src/components/RegistroComponent" />
+      <recent name="$PROJECT_DIR$/src/components/EstudentComponent/OptionComponent/ProgressBarComponent" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Node.js.index.js">
+    <configuration name="debugJs" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:3000/" />
+    <configuration name="App.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="App.js" working-dir="$PROJECT_DIR$/src" />
+    <configuration name="index.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/TableComponent/index.js" working-dir="$PROJECT_DIR$/src/TableComponent" />
+    <list>
+      <item itemvalue="JavaScript Debug.debugJs" />
+      <item itemvalue="Node.js.App.js" />
+      <item itemvalue="Node.js.index.js" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.index.js" />
+        <item itemvalue="Node.js.App.js" />
+        <item itemvalue="Node.js.index.js" />
+        <item itemvalue="Node.js.App.js" />
+        <item itemvalue="Node.js.index.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81878699-2634-47c8-8a79-197862f7e9e7" name="Default" comment="" />
+      <created>1528568021189</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1528568021189</updated>
+      <workItem from="1528568022838" duration="1592000" />
+      <workItem from="1528656595257" duration="764000" />
+      <workItem from="1528657981397" duration="420000" />
+      <workItem from="1528658437169" duration="338000" />
+      <workItem from="1528658790130" duration="5000" />
+      <workItem from="1528658891145" duration="3000" />
+      <workItem from="1528658924094" duration="12000" />
+      <workItem from="1528659029982" duration="29000" />
+      <workItem from="1528659080668" duration="11000" />
+      <workItem from="1528659122466" duration="2000" />
+      <workItem from="1528659245118" duration="8000" />
+      <workItem from="1528659337061" duration="5000" />
+      <workItem from="1528660071516" duration="6000" />
+      <workItem from="1528660089989" duration="15000" />
+      <workItem from="1528660268619" duration="12000" />
+      <workItem from="1528662286935" duration="19589000" />
+      <workItem from="1528741302446" duration="7332000" />
+      <workItem from="1528767751198" duration="1577000" />
+      <workItem from="1528818222273" duration="537000" />
+      <workItem from="1528818769996" duration="32476000" />
+      <workItem from="1528922604520" duration="145000" />
+      <workItem from="1528922763988" duration="3125000" />
+      <workItem from="1528991940116" duration="11391000" />
+      <workItem from="1529030300196" duration="4968000" />
+      <workItem from="1529078021206" duration="8310000" />
+      <workItem from="1530151644877" duration="899000" />
+      <workItem from="1530152907658" duration="3736000" />
+      <workItem from="1530920317857" duration="3200000" />
+      <workItem from="1530926635702" duration="16410000" />
+      <workItem from="1531186542372" duration="5491000" />
+      <workItem from="1531237196672" duration="7314000" />
+      <workItem from="1533081241574" duration="163000" />
+    </task>
+    <task id="LOCAL-00001" summary="Componente Registro Digital barra principal realizada.">
+      <created>1528923698384</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1528923698384</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Componente Registro Digital barra principal realizada.">
+      <created>1528992810685</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1528992810685</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Componente Registro Digital barra principal realizada.">
+      <created>1528993125551</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1528993125551</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="129885000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1919" y="301" width="1368" height="780" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49916527" weight="0.26980567" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.5008347" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007474" side_tool="true" weight="0.32888147" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49925262" weight="0.32888147" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32903227" />
+      <window_info id="Structure" order="1" sideWeight="0.5008347" side_tool="true" weight="0.3497758" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49918875" weight="0.524207" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39979124" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32888147" />
+      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.32888147" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32888147" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32903227" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49916527" visible="true" weight="0.26980567" />
+      <window_info id="Structure" order="1" sideWeight="0.5008347" side_tool="true" weight="0.3497758" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.5008347" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49925262" weight="0.32888147" />
+      <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32888147" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39979124" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49918875" weight="0.524207" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007474" side_tool="true" weight="0.32888147" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32888147" />
+      <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.32888147" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Agregado react-bootstrap-table@4.3.1" />
+    <MESSAGE value="Componente Registro Digital barra principal realizada." />
+    <option name="LAST_COMMIT_MESSAGE" value="Componente Registro Digital barra principal realizada." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="14" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/RegistroDigital/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/RegistroDigital/TituloApp/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/constantes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/manifest.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-dom/cjs/react-dom.development.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="6306" column="2" selection-start-line="6306" selection-start-column="2" selection-end-line="6306" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react/cjs/react.development.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="1378" selection-start-line="1378" selection-end-line="1378" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TableComponent/index.js" />
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/registerServiceWorker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3240" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/registroDigital/OptionComponent/ProgressBarComponent/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logo.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <folding>
+              <element signature="e#0#41#0" expanded="true" />
+              <element signature="e#0#41#0" expanded="true" />
+              <element signature="e#0#26#0" expanded="true" />
+              <element signature="e#0#42#0" expanded="true" />
+              <element signature="e#0#26#0" expanded="true" />
+              <element signature="e#0#35#0" expanded="true" />
+              <element signature="e#0#26#0" expanded="true" />
+              <element signature="e#0#26#0" expanded="true" />
+              <element signature="e#0#26#0" expanded="true" />
+              <element signature="e#0#28#0" expanded="true" />
+              <element signature="e#0#28#0" expanded="true" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/registroDigital/IDComponent/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/CalificacionComponent/SearchComponent/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/CalificacionComponent/EditableRowComponent/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/CalificacionComponent/TablaCalificacionComponent/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/CalificacionComponent/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/CalificacionComponent/CalificationRowComponent/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/registroDigital/OptionComponent/CheckBoxComponent/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/registroDigital/OptionComponent/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/registroDigital/asistencia/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/constantes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-693">
+          <caret line="22" column="212" selection-start-line="22" selection-start-column="212" selection-end-line="22" selection-end-column="212" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/RegistroDigital/Asignatura/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/RegistroDigital/Profesor/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/RegistroDigital/TituloApp/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/RegistroDigital/PeriodoEscolar/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-374">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/RegistroDigital/Curso/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/RegistroDigital/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Calificacion/AsistenciaList/Fecha/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/Calificacion/CalificacionCompletiva/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="49" column="21" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Calificacion/CalificacionSituacionFinalCAP/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="47" column="18" lean-forward="true" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Calificacion/CalificacionExtraordinaria/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1551">
+          <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Calificacion/AsistenciaList/FechaAsistencia/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="925">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Calificacion/AsistenciaList/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="49" column="18" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Calificacion/CalificacionParcial/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="92" column="19" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/RegistroDigital/OpcionesTabCalificaciones/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

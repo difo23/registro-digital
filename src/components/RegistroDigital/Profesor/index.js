@@ -2,7 +2,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import { FormControl, FormGroup, ControlLabel} from 'react-bootstrap';
 
-const profesor = (props) => {
+const Profesor = (props) => {
     return (
         <div className={"IDComponent"}>
 
@@ -17,7 +17,7 @@ const profesor = (props) => {
     );
 };
 
-// profesor.propTypes = {};
-// profesor.defaultProps = {};
+// Profesor.propTypes = {};
+// Profesor.defaultProps = {};
 
-export default profesor;
+export default Profesor;

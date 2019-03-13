@@ -1,0 +1,41 @@
+{ 
+"calificaciones":[
+ {
+        "id": 1,
+        "primerTrimestre": 80,
+        "segundoTrimestre": 80,
+        "tercerBimestre": 80,
+        "cuartoTrimestre": 80,
+        "calificacionFinal":80
+} , {
+        "id": 2,
+        "primerTrimestre": 80,
+        "segundoTrimestre": 80,
+        "tercerBimestre": 80,
+        "cuartoTrimestre": 80,
+        "calificacionFinal":80
+}, {
+        "id": 2,
+        "primerTrimestre": 80,
+        "segundoTrimestre": 80,
+        "tercerBimestre": 80,
+        "cuartoTrimestre": 80,
+        "calificacionFinal":80
+}, {
+        "id": 2,
+        "primerTrimestre": 80,
+        "segundoTrimestre": 80,
+        "tercerBimestre": 80,
+        "cuartoTrimestre": 80,
+        "calificacionFinal":80
+}, {
+        "id": 2,
+        "primerTrimestre": 80,
+        "segundoTrimestre": 80,
+        "tercerBimestre": 80,
+        "cuartoTrimestre": 80,
+        "calificacionFinal":80
+}]
+
+}
+

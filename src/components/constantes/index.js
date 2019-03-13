@@ -1,5 +1,5 @@
 
 const LabelEstudentClassName= 'EstudentLabel';
-const LabelEstudentText ='Registro de Academico:';
+const LabelEstudentText ='Registro Academico:';
 
 export {LabelEstudentClassName, LabelEstudentText};

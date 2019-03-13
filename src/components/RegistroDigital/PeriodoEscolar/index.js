@@ -3,23 +3,22 @@ import PropTypes from 'prop-types';
 import { FormControl, FormGroup, ControlLabel} from 'react-bootstrap';
 
 
-const PeriodoEscolarComponent = (props) => {
+const PeriodoEscolar = (props) => {
     return (
         <div className={"IDComponent"}>
-            {/*<h4><strong>6F</strong><br/>*/}
-            {/*2018-19 </h4>*/}
             <FormGroup controlId="formControlsSelect">
                 <ControlLabel><strong>Año:</strong></ControlLabel>
                 <FormControl componentClass="select" placeholder="select">
-                    <option value="select">2017-8</option>
-                    <option value="other">2018-9</option>
+                    <option value="select">2017-18</option>
+                    <option value="other">2018-19</option>
+
                 </FormControl>
             </FormGroup>
         </div>
     );
 };
 
-PeriodoEscolarComponent.propTypes = {};
-PeriodoEscolarComponent.defaultProps = {};
+PeriodoEscolar.propTypes = {};
+PeriodoEscolar.defaultProps = {};
 
-export default PeriodoEscolarComponent;
+export default PeriodoEscolar;

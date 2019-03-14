@@ -56,9 +56,9 @@ const CalificacionCompletiva = (props) => {
                 columns={ columns } />
 
 <div>
-                <button type="button" class="btn-lg btn-primary ">+</button>
-                <button type="button" class="btn-lg btn-danger ">-</button>
-                <button type="button" class="btn-lg btn-success ">Guardar</button>
+                <button type="button" className="btn-lg btn-primary ">+</button>
+                <button type="button" className="btn-lg btn-danger ">-</button>
+                <button type="button" className="btn-lg btn-success ">Guardar</button>
                  </div>
         </div>
     );

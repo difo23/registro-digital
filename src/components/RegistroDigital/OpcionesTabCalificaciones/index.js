@@ -1,39 +1,51 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
 import { Tabs, Tab} from 'react-bootstrap';
-import CalificacionParcial from '../../Calificacion/CalificacionParcial';
-import CalificacionTecnica from '../../Calificacion/CalificacionTecnica';
-import CalificacionCompletiva from '../../Calificacion/CalificacionCompletiva';
-import CalificacionExtraordinaria from '../../Calificacion/CalificacionExtraordinaria';
-import CalificacionSituacionFinalCAP from '../../Calificacion/CalificacionSituacionFinalCAP';
-import AsisteciaList from '../../Calificacion/AsistenciaList';
+import TablaRegistro from '../../RegistroDigital/TablaRegistro'
 
-const OpcionesTabCalificaciones = (props) => {
-    return (
-        <div className={"OpcionesTabCalificaciones"}>
-            <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
-                <Tab eventKey={1} title="Calificacion Parcial">
-                    <CalificacionParcial/>
+class OpcionesTabCalificaciones extends React.Component  {
 
-                </Tab>
-                <Tab eventKey={2} title="Calificacion Completiva">
-                        <CalificacionCompletiva/>
-                </Tab>
-                <Tab eventKey={3} title="Calificacion Extraordinaria" >
-                        <CalificacionExtraordinaria/>
-                </Tab>
-                <Tab eventKey={4} title="Situacion final-CAP" >
-                        <CalificacionSituacionFinalCAP/>
-                </Tab>
-                <Tab eventKey={5} title="AS" >
-                        <AsisteciaList/>
-                </Tab>
-                <Tab eventKey={6} title="Calificacion Tecnica" >
-                    <CalificacionTecnica/>
-                </Tab>
-            </Tabs>
-        </div>
-    );
+    constructor(props){
+        super(props);
+
+    }
+
+
+
+    render(){
+        return (
+            <div className={"OpcionesTabCalificaciones"}>
+                <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
+                    
+                    <Tab eventKey={1} title="Calificacion Parcial">
+                        
+                        <TablaRegistro tablaType= {0}/>
+
+                    </Tab>
+                    <Tab eventKey={2} title="Calificacion Extraordinaria ">
+                                <TablaRegistro tablaType= {1}/>
+                    </Tab>
+                    <Tab eventKey={3} title="Calificacion Completiva" >
+                                <TablaRegistro tablaType= {2}/>
+                            
+                    </Tab>
+                    {/* <Tab eventKey={4} title="Situacion final-CAP" >
+                            {/* <CalificacionSituacionFinalCAP/> */}
+                    {/* </Tab> */} 
+                    
+                    <Tab eventKey={6} title="Calificacion Tecnica" >
+                    <TablaRegistro tablaType= {4}/>
+                        
+                    </Tab>
+
+                    <Tab eventKey={5} title="AS" >
+                    <TablaRegistro tablaType= {3}/>
+                            
+                    </Tab>
+                </Tabs>
+            </div>
+        );
+    }
 };
 
 // OpcionesTabCalificaciones.propTypes = {};

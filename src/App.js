@@ -7,21 +7,19 @@ import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 
 class App extends Component {
   render() {
-      return <div className="App">
-          <header className="App-header">
-              <img src={logo} className="App-logo" alt="logo"/>
-              <h1 className="App-title">CEMAS Registro Digital</h1>
-          </header>
-          <p className="App-intro">
+    return (
+      <div className="App">
+        <header className="App-header">
+            <img src={logo} className="App-logo" alt="logo"/>
+            <h1 className="App-title">CEMAS Registro Digital</h1>
+          
+        </header>
+      
+        <div>
+            <RegistroDigital/>
+        </div>
 
-          </p>
-            <div>
-
-                            <RegistroDigital/>
-
-            </div>
-
-      </div>
+      </div>);
   }
 }
 

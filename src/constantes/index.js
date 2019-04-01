@@ -215,7 +215,8 @@ const PARCIAL_COLUMNS = [{
     text: 'ABR-MAY-JUN:'
 }, {
     dataField: 'calificacionFinal',
-    text: 'C.F:'
+    text: 'C.F:',
+    editable: false
 }];
 
 
@@ -257,6 +258,7 @@ let TECNICA_COLUMNS = [{
 }, {
     dataField: 'calificacionFinal',
     text: 'C.F:',
+    editable: false
    
 }];
 
@@ -268,16 +270,19 @@ const COMPLETIVA_COLUMNS = [{
     
 },  {
     dataField: 'cincuetaPorCientoPCP',
-    text: '50% P.C.P:'
+    text: '50% P.C.P:',
+    editable: false
 }, {
     dataField: 'CPC',
     text: 'C.P.C:'
 }, {
     dataField: 'cincuentaPorCientoCPC',
-    text: '50% C.P.C:'
+    text: '50% C.P.C:',
+    editable: false
 }, {
     dataField: 'calificacionFinal',
-    text: 'C.C:'
+    text: 'C.C:',
+    editable: false
 }];
 
 
@@ -287,16 +292,19 @@ const EXTRAORDINARIA_COLUMNS = [{
     filter: textFilter()
 },  {
     dataField: 'treintaPorCientoPCP',
-    text: '30% P.C.P:'
+    text: '30% P.C.P:',
+    editable: false
 }, {
     dataField: 'CPEX',
     text: 'C.P.EX:'
 }, {
     dataField: 'setentaPorCientoCPEX',
-    text: '70% C.P.EX:'
+    text: '70% C.P.EX:',
+    editable: false
 }, {
     dataField: 'calificacionFinal',
-    text: 'C.EX:'
+    text: 'C.EX:',
+    editable: false
 }];
 
 const ASISTENCIA_COLUMNS = [{

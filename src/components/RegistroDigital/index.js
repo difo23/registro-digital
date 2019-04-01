@@ -19,7 +19,12 @@ class RegistroDigital extends React.Component {
             modalidad: 0,
             asignatura_options: asignaturaOptions,
             profesor_options: profesorOptions,
-
+            periodo: '-',
+            centro: '-',
+            grado:'-',
+            seccion: '-',
+            asignatura: '-',
+            profesor: '-'
         }
 
 
@@ -34,18 +39,17 @@ class RegistroDigital extends React.Component {
     }
 
 
-    onGradoChange(element, type){
+    onGradoChange(element){
         console.log(CONSTANTES.GRADO_OPTIONS[element]);
     }
 
 
-    onSeccionChange(element, type){
+    onSeccionChange(element){
         console.log(CONSTANTES.SECCION_OPTIONS[element]);
     }
 
     onModalidadChange(element, modalidad){
 
-    
         console.log(CONSTANTES.MODALIDAD_OPTIONS[element], element);
         let newAsiganaturaOptions = getAsignaturaOptions(element);
         let newProfesorOptions = getProfesorOptions(element);
@@ -53,40 +57,41 @@ class RegistroDigital extends React.Component {
         this.setState({
             modalidad: element,
             asignatura_options: newAsiganaturaOptions,
-            profesor_options: newProfesorOptions
+            profesor_options: newProfesorOptions,
+            
         });
-
         console.log(newAsiganaturaOptions);
         console.log(newProfesorOptions);
-
        // this.render()
-       
-
-
+      
     }
 
     onAsignaturaChange(element){
         console.log(CONSTANTES.ASIGNATURA_GENERAL_OPTIONS[element]);
+        let newAsignatura = CONSTANTES.ASIGNATURA_GENERAL_OPTIONS[element];
+        this.setState({asignatura: newAsignatura});
     }
 
-    onProfesorChange(element, type){
-        console.log(CONSTANTES.PROFESOR_GENERAL_OPTIONS[element]);
+    onProfesorChange(element){
+      
+        console.log(this.state.profesor_options[element]);
+        let newProfesor = this.state.profesor_options[element];
 
+        //TODO: Seguir actualizando los estados para cada campo
+        this.setState({
+            profesor: newProfesor
+        });          
     }
 
-    onCentroChange(element, type){
+
+    onCentroChange(element){
         console.log(CONSTANTES.CENTRO_EDUCATIVO_OPTIONS[element]);
     }
-    onPeriodoChange(element, type){
+    onPeriodoChange(element){
         console.log(CONSTANTES.PERIODO_ESCOLAR_OPTIONS[element]);
     }
 
     render(){
-
-        let optionsAsignatura = this.state.asignatura_options;
-        let optionsProfesor = this.state.profesor_options;
-
-        console.log('Antes del return',optionsAsignatura, optionsProfesor)
     return (
         <div className={"RegistroDigital"}>
             <Grid>

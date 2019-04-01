@@ -11,6 +11,7 @@ class TablaRegistro extends Component {
 
     selectRow = {
         mode: 'checkbox',
+        
         //TODO: Revisar la informacion de https://react-bootstrap-table.github.io/react-bootstrap-table2/storybook/index.html?selectedKind=Row%20Selection&selectedStory=Selection%20Management&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel
         // selected: [1, 3] // should be a row keys array
     };
@@ -55,7 +56,7 @@ class TablaRegistro extends Component {
 
     cellEdit = cellEditFactory({
         mode: 'click',
-    
+        blurToSave: true,
         beforeSaveCell: (oldValue, newValue, row, column) => {
             console.log("beforeSaveCell old value: ", oldValue);
             console.log("beforeSaveCellNew value: ", newValue);

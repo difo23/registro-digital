@@ -1,6 +1,6 @@
 import React from 'react';
 import CONSTANTES from '../../constantes';
-import { getAsignaturaOptions, getProfesorOptions } from './tablaCalificaciones/Selectores/utils/util';
+import { getAsignaturaOptions, getProfesorOptions } from './TablaCalificaciones/Selectores/utils/util';
 import TablaAcademica from './TablaCalificaciones/TablaAcademica';
 
 class RegistroDigital extends React.Component {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './feyalegrialogovector.png';
+//import logo from './feyalegrialogovector.png';
 import './App.css';
 import RegistroDigital from './components/RegistroDigital';
 import NavBarRegistro from './components/NavBarRegistro';

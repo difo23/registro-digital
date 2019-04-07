@@ -1,8 +1,8 @@
 //import PropTypes from 'prop-types';
-import { Tabs, Tab } from 'react-bootstrap';
+//import { Tabs, Tab } from 'react-bootstrap';
 import TablaRegistro from '../TablaRegistro';
 import React from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
 
 class OpcionesCalificacionesAcademico extends React.Component {
@@ -79,9 +79,9 @@ class OpcionesCalificacionesAcademico extends React.Component {
 					</NavItem>{' '}
 					<NavItem>
 						<NavLink
-							className={classnames({ active: this.state.activeTab === '5' })}
+							className={classnames({ active: this.state.activeTab === '6' })}
 							onClick={() => {
-								this.toggle('5');
+								this.toggle('6');
 							}}
 						>
 							AS%
@@ -122,7 +122,9 @@ class OpcionesCalificacionesAcademico extends React.Component {
 				<TabContent activeTab={this.state.activeTab}>
 					<TabPane tabId="4">
 						<Row>
-							<Col sm="12">{/* <TablaRegistro tablaType={1} /> */}</Col>
+							<Col sm="12">
+								<TablaRegistro tablaType={3} />
+							</Col>
 						</Row>
 					</TabPane>
 				</TabContent>
@@ -130,7 +132,9 @@ class OpcionesCalificacionesAcademico extends React.Component {
 				<TabContent activeTab={this.state.activeTab}>
 					<TabPane tabId="5">
 						<Row>
-							<Col sm="12">{/* <TablaRegistro tablaType={1} /> */}</Col>
+							<Col sm="12">
+								<TablaRegistro tablaType={4} />
+							</Col>
 						</Row>
 					</TabPane>
 				</TabContent>
@@ -138,7 +142,9 @@ class OpcionesCalificacionesAcademico extends React.Component {
 				<TabContent activeTab={this.state.activeTab}>
 					<TabPane tabId="6">
 						<Row>
-							<Col sm="12">{/* <TablaRegistro tablaType={1} /> */}</Col>
+							<Col sm="12">
+								<TablaRegistro tablaType={5} />
+							</Col>
 						</Row>
 					</TabPane>
 				</TabContent>

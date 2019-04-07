@@ -7,8 +7,10 @@ const TABLA_TYPE = {
 	PARCIAL: 0,
 	COMPLETIVA: 1,
 	EXTRAORDINARIA: 2,
-	ASISTENCIA: 3,
-	TECNICA: 4
+	SITUACIONFINAL: 3,
+	CAP: 4,
+	ASISTENCIA: 5,
+	TECNICA: 6
 };
 
 const SELECTOR_TYPE = {
@@ -235,6 +237,38 @@ const ASISTENCIA_COLUMNS = [
 	}
 ];
 
+const SITUACION_FINAL_COLUMNS = [
+	{
+		dataField: 'id',
+		text: '',
+		filter: textFilter()
+	},
+	{
+		dataField: 'a',
+		text: 'A:'
+	},
+	{
+		dataField: 'r',
+		text: 'R:'
+	}
+];
+
+const CAP_COLUMNS = [
+	{
+		dataField: 'id',
+		text: '',
+		filter: textFilter()
+	},
+	{
+		dataField: 'oportunidad1',
+		text: '1:'
+	},
+	{
+		dataField: 'oportunidad2',
+		text: '2:'
+	}
+];
+
 let CONSTANTES = {
 	TITULO_CLASSNAME,
 	TITULO_TEXT,
@@ -261,6 +295,8 @@ let CONSTANTES = {
 	SECCION_OPTIONS,
 	PARCIAL_COLUMNS,
 	TECNICA_COLUMNS,
+	CAP_COLUMNS,
+	SITUACION_FINAL_COLUMNS,
 	COMPLETIVA_COLUMNS,
 	EXTRAORDINARIA_COLUMNS,
 	ASISTENCIA_COLUMNS

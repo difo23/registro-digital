@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Grid, Row, Col } from 'react-bootstrap';
 import { Card, CardTitle, CardText } from 'reactstrap';
-import OpcionesTabCalificaciones from '../OpcionesCalificacionesAcademico';
+import OpcionesCalificacionesAcademico from '../OpcionesCalificacionesAcademico';
 
 class TablaAcademica extends React.Component {
 	render() {
@@ -11,12 +11,20 @@ class TablaAcademica extends React.Component {
 				<Grid>
 					<Card body>
 						<CardTitle>
-							<h1>CALIFICACIONES MODALIDAD ACADEMICA</h1>
+							<h1>CALIFICACIONES MODALIDAD ACADEMICA (SIGLAS CENTRO)</h1>
 						</CardTitle>
-						<CardText>PERIODO (2019-2020): ASIGNATURA NAME - PROFESOR NAME.</CardText>
+						<CardText>
+							<strong>PERIODO (2019-2020): ASIGNATURA SIGLAS - PROFESOR NAME.</strong>
+							<p>
+								C.F.= Califcación Final %AA= Porciento de Asistencia Anual C.P.C.= Califcación Prueba
+								Completiva C.C.= Califcación Completiva C.P.EX= Califcación Prueba Extraordinaria C.EX.=
+								Califcación Extraordinaria A= Aprobada R= Reprobada CAP= Califcación Asignaturas
+								Pendientes
+							</p>
+						</CardText>
 						<Row>
 							<Col xs={12} md={12}>
-								<OpcionesTabCalificaciones />
+								<OpcionesCalificacionesAcademico />
 							</Col>
 						</Row>
 					</Card>

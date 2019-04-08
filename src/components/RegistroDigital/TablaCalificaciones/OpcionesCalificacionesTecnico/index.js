@@ -9,7 +9,7 @@ class OpcionesCalificacionesTecnico extends React.Component {
 
 		this.toggle = this.toggle.bind(this);
 		this.state = {
-			activeTab: '1'
+			activeTab: '0'
 		};
 	}
 
@@ -27,9 +27,9 @@ class OpcionesCalificacionesTecnico extends React.Component {
 				<Nav tabs>
 					<NavItem>
 						<NavLink
-							className={classnames({ active: this.state.activeTab === '5' })}
+							className={classnames({ active: this.state.activeTab === '0' })}
 							onClick={() => {
-								this.toggle('5');
+								this.toggle('0');
 							}}
 						>
 							% RESULTADO DE APRENDIZAJE
@@ -37,9 +37,9 @@ class OpcionesCalificacionesTecnico extends React.Component {
 					</NavItem>{' '}
 					<NavItem>
 						<NavLink
-							className={classnames({ active: this.state.activeTab === '6' })}
+							className={classnames({ active: this.state.activeTab === '1' })}
 							onClick={() => {
-								this.toggle('5');
+								this.toggle('1');
 							}}
 						>
 							% ASISTENCIA
@@ -48,17 +48,21 @@ class OpcionesCalificacionesTecnico extends React.Component {
 				</Nav>
 
 				<TabContent activeTab={this.state.activeTab}>
-					<TabPane tabId="5">
+					<TabPane tabId="0">
 						<Row>
-							<Col sm="12">{/* <TablaRegistro tablaType={1} /> */}</Col>
+							<Col sm="12">
+								<TablaRegistro tablaType={6} />
+							</Col>
 						</Row>
 					</TabPane>
 				</TabContent>
 
 				<TabContent activeTab={this.state.activeTab}>
-					<TabPane tabId="6">
+					<TabPane tabId="1">
 						<Row>
-							<Col sm="12">{/* <TablaRegistro tablaType={1} /> */}</Col>
+							<Col sm="12">
+								<TablaRegistro tablaType={5} />
+							</Col>
 						</Row>
 					</TabPane>
 				</TabContent>

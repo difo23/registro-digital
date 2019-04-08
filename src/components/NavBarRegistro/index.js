@@ -21,10 +21,12 @@ class NavBarRegistro extends React.Component {
 		super(props);
 
 		this.toggle = this.toggle.bind(this);
+
 		this.state = {
 			isOpen: false
 		};
 	}
+
 	toggle() {
 		this.setState({
 			isOpen: !this.state.isOpen
@@ -51,13 +53,16 @@ class NavBarRegistro extends React.Component {
 							</NavItem> */}
 							<UncontrolledDropdown nav inNavbar>
 								<DropdownToggle nav caret>
-									Options
+									Interfaces
 								</DropdownToggle>
 								<DropdownMenu right>
-									<DropdownItem>Option 1</DropdownItem>
-									<DropdownItem>Option 2</DropdownItem>
+									<DropdownItem href="/centros">Centro</DropdownItem>
+									<DropdownItem href="/libros">Libro</DropdownItem>
+									<DropdownItem href="/estudiantes">Estudiante</DropdownItem>
+									<DropdownItem href="/asignaturas">Asignatura</DropdownItem>
 									<DropdownItem divider />
-									<DropdownItem>Reset</DropdownItem>
+									<DropdownItem href="/califAcadem">Calificaciones Academicas</DropdownItem>
+									<DropdownItem href="/califTecn">Calificaciones Tecnicas</DropdownItem>
 								</DropdownMenu>
 							</UncontrolledDropdown>
 						</Nav>

@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
+import './index.css';
+import Example from './Formularioa';
+
 
 class Centro extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {};
 	}
-
 	render() {
 		return (
-			<div>
-				<h1> Esta interfaz corresponde a los centros, esta siendo hecha por vagos. </h1>
+			
+			<div id="bor" >
+			
+			<Example> </Example>
+			
+			
 			</div>
+			
 		);
 	}
 }
-
 export default Centro;

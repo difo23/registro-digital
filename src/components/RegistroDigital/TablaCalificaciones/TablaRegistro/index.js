@@ -22,7 +22,8 @@ class TablaRegistro extends Component {
 		this.state = {
 			rows: [],
 			columns: getNewColumns(props.tablaType),
-			type: props.tablaType
+			type: props.tablaType,
+			carry: this.props.carry
 		};
 
 		this.addRow = this.addRow.bind(this);
@@ -62,10 +63,50 @@ class TablaRegistro extends Component {
 		afterSaveCell: (oldValue, newValue, row, column) => {
 			let type = this.state.type;
 			let rows = this.state.rows;
+			let newcarry = this.state.carry;
+			let newData;
 
-			let newData = updateRow(type, row.id, rows);
+			if (
+				this.state.type === CONSTANTES.TABLA_TYPE.EXTRAORDINARIA ||
+				this.state.type === CONSTANTES.TABLA_TYPE.COMPLETIVA
+			) {
+				let index = this.state.carry.findIndex(function(element) {
+					return element.id == row.id;
+				});
+
+				let value = 0;
+				if (index >= 0) {
+					console.log('Carry enviado :', newcarry[index].value);
+					value = newcarry[index].value;
+				}
+				newData = updateRow(type, row.id, rows, value);
+			} else {
+				newData = updateRow(type, row.id, rows, 0);
+			}
+
+			if (this.state.type === CONSTANTES.TABLA_TYPE.PARCIAL) {
+				if (newData[newcarry.length - 1].calificacionFinal < 70) {
+					let index = newcarry.findIndex(function(element) {
+						return element.id === row.id;
+					});
+
+					console.log('Index: ', index);
+
+					if (index >= 0) {
+						newcarry[index].value = newData[newcarry.length - 1].calificacionFinal;
+					} else {
+						console.log(newData);
+						newcarry.push({
+							id: row.id,
+							value: row.calificacionFinal
+						});
+					}
+				}
+			}
+
 			this.setState({
-				rows: newData
+				rows: newData,
+				carry: newcarry
 			});
 			console.log('Estado actualizado', this.state);
 		}

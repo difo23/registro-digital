@@ -66,7 +66,7 @@ let getNewColumns = (type) => {
 //Funcion que actualiza el promedio de las notas al modificarse un
 //valor de la fila.
 
-//TODO: a esto se le puede hacer refactoring para no repetir tanto codigo
+//FIXME: a esto se le puede hacer refactoring para no repetir tanto codigo
 
 let updateParcialRows = (id, data) => {
 	let promedio = 0;
@@ -104,6 +104,19 @@ let updateExtraordinarioRows = (id, data, pcp) => {
 	return data;
 };
 
+//TODO: En caso de necesitar actualizar los datos de estas filas, hasta el momento no.
+let updateSituacionFinalRows = (id, data) => {
+	return data;
+};
+
+let updateAsistenciaRows = (id, data) => {
+	return data;
+};
+
+let updateCAPRows = (id, data) => {
+	return data;
+};
+
 let updateCompletivoRows = (id, data, pcp) => {
 	let promedio = 0;
 	for (var row of data) {
@@ -130,19 +143,19 @@ let updateTecnicaRows = (id, data) => {
 			for (const prop in row) {
 				if (prop !== 'calificacionFinal' && prop !== 'id') {
 					let valor = parseInt(row[prop], 10);
-					if (parseInt(valor > 0)) {
+					if (valor > 0) {
 						promedio += valor;
 					}
 				}
 			}
-			row.calificacionFinal = promedio > 100 ? 'Error!' : promedio;
+			row.calificacionFinal = promedio;
 		}
 	}
 
 	return data;
 };
 
-let updateRow = (type, idRow, oldData) => {
+let updateRow = (type, idRow, oldData, carry) => {
 	switch (type) {
 		case CONSTANTES.TABLA_TYPE.PARCIAL:
 			return updateParcialRows(idRow, oldData);
@@ -151,16 +164,21 @@ let updateRow = (type, idRow, oldData) => {
 			return updateTecnicaRows(idRow, oldData);
 
 		case CONSTANTES.TABLA_TYPE.EXTRAORDINARIA:
-			return updateExtraordinarioRows(idRow, oldData, 80);
+			return updateExtraordinarioRows(idRow, oldData, carry);
 
 		case CONSTANTES.TABLA_TYPE.COMPLETIVA:
-			return updateCompletivoRows(idRow, oldData, 80);
+			return updateCompletivoRows(idRow, oldData, carry);
 
 		case CONSTANTES.TABLA_TYPE.ASISTENCIA:
-			return;
+			return updateAsistenciaRows(idRow, oldData);
 
+		case CONSTANTES.TABLA_TYPE.SITUACIONFINAL:
+			return updateSituacionFinalRows(idRow, oldData);
+
+		case CONSTANTES.TABLA_TYPE.CAP:
+			return updateCAPRows(idRow, oldData);
 		default:
-			return {};
+			return { oldData };
 	}
 };
 

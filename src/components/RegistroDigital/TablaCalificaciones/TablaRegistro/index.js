@@ -19,6 +19,15 @@ class TablaRegistro extends Component {
 	constructor(props) {
 		super(props);
 
+		let extraordinaria = this.props.tablaType === CONSTANTES.TABLA_TYPE.EXTRAORDINARIA;
+		let completiva = this.props.tablaType === CONSTANTES.TABLA_TYPE.COMPLETIVA;
+
+		let defaultrow = [];
+
+		if (extraordinaria || completiva) {
+			defaultrow = this.defaultsRowCreate(this.props.carry);
+		}
+
 		this.state = {
 			rows: [],
 			columns: getNewColumns(props.tablaType),
@@ -27,7 +36,42 @@ class TablaRegistro extends Component {
 		};
 
 		this.addRow = this.addRow.bind(this);
+		this.defaultsRowCreate = this.defaultsRowCreate.bind(this);
 		this.remRow = this.remRow.bind(this);
+	}
+
+	defaultsRowCreate(carry) {
+		let completiva = this.props.tablaType === CONSTANTES.TABLA_TYPE.COMPLETIVA;
+		let row = [];
+		console.log('Carry: ', carry);
+
+		if (completiva) {
+			for (let i = 0; i < carry.length; i++) {
+				let value = parseInt(carry[i].value, 10);
+				let newRow = {
+					id: carry[i].id,
+					cincuetaPorCientoPCP: Math.round(value * 0.5),
+					CPC: 0,
+					cincuentaPorCientoCPC: 0,
+					calificacionFinal: 0
+				};
+				row.push(newRow);
+			}
+		} else {
+			for (let i = 0; i < carry.length; i++) {
+				let newRow = {
+					id: 1,
+					treintaPorCientoPCP: Math.round(carry.value * 0.3),
+					CPEX: 0,
+					setentaPorCientoCPEX: 0,
+					calificacionFinal: 0
+				};
+				row.push(newRow);
+			}
+		}
+
+		console.log('Default create: ', row);
+		return row;
 	}
 
 	addRow = () => {
@@ -50,10 +94,10 @@ class TablaRegistro extends Component {
 		mode: 'click',
 		blurToSave: true,
 		beforeSaveCell: (oldValue, newValue, row, column) => {
-			console.log('beforeSaveCell old value: ', oldValue);
-			console.log('beforeSaveCellNew value: ', newValue);
-			console.log('beforeSaveCell Row: ', row);
-			console.log('beforeSaveCell Column: ', column);
+			// console.log('beforeSaveCell old value: ', oldValue);
+			// console.log('beforeSaveCellNew value: ', newValue);
+			// console.log('beforeSaveCell Row: ', row);
+			// console.log('beforeSaveCell Column: ', column);
 		},
 
 		validator: (newValue, row, column) => {
@@ -66,23 +110,23 @@ class TablaRegistro extends Component {
 			let newcarry = this.state.carry;
 			let newData;
 
-			if (
-				this.state.type === CONSTANTES.TABLA_TYPE.EXTRAORDINARIA ||
-				this.state.type === CONSTANTES.TABLA_TYPE.COMPLETIVA
-			) {
-				let index = this.state.carry.findIndex(function(element) {
-					return element.id == row.id;
-				});
+			// if (
+			// 	this.state.type === CONSTANTES.TABLA_TYPE.EXTRAORDINARIA ||
+			// 	this.state.type === CONSTANTES.TABLA_TYPE.COMPLETIVA
+			// ) {
+			// 	// let index = this.state.carry.findIndex(function(element) {
+			// 	// 	return element.id == row.id;
+			// 	// });
 
-				let value = 0;
-				if (index >= 0) {
-					console.log('Carry enviado :', newcarry[index].value);
-					value = newcarry[index].value;
-				}
-				newData = updateRow(type, row.id, rows, value);
-			} else {
-				newData = updateRow(type, row.id, rows, 0);
-			}
+			// 	// let value = 0;
+			// 	// if (index >= 0) {
+			// 	// 	console.log('Carry enviado :', newcarry[index].value);
+			// 	// 	value = newcarry[index].value;
+			// 	// }
+			// 	newData = updateRow(type, row.id, rows);
+			// } else {
+			newData = updateRow(type, row.id, rows);
+			//}
 
 			if (this.state.type === CONSTANTES.TABLA_TYPE.PARCIAL) {
 				if (newData[newcarry.length - 1].calificacionFinal < 70) {
@@ -103,6 +147,8 @@ class TablaRegistro extends Component {
 					}
 				}
 			}
+
+			this.props.set(newcarry);
 
 			this.setState({
 				rows: newData,

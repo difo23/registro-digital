@@ -85,12 +85,12 @@ let updateParcialRows = (id, data) => {
 	return data;
 };
 
-let updateExtraordinarioRows = (id, data, pcp) => {
+let updateExtraordinarioRows = (id, data) => {
 	let promedio = 0;
 	for (var row of data) {
 		if (row.id === id) {
 			row.setentaPorCientoCPEX = Math.round(row.CPEX * 0.7);
-			row.treintaPorCientoPCP = Math.round(pcp * 0.3);
+			//row.treintaPorCientoPCP = Math.round(pcp * 0.3);
 
 			for (const prop in row) {
 				if (prop !== 'calificacionFinal' && prop !== 'id' && prop !== 'CPEX') {
@@ -117,12 +117,12 @@ let updateCAPRows = (id, data) => {
 	return data;
 };
 
-let updateCompletivoRows = (id, data, pcp) => {
+let updateCompletivoRows = (id, data) => {
 	let promedio = 0;
 	for (var row of data) {
 		if (row.id === id) {
 			row.cincuentaPorCientoCPC = Math.round(row.CPC * 0.5);
-			row.cincuetaPorCientoPCP = Math.round(pcp * 0.5);
+			//row.cincuetaPorCientoPCP = Math.round(pcp * 0.5);
 
 			for (const prop in row) {
 				if (prop !== 'calificacionFinal' && prop !== 'id' && prop !== 'CPC') {
@@ -155,7 +155,7 @@ let updateTecnicaRows = (id, data) => {
 	return data;
 };
 
-let updateRow = (type, idRow, oldData, carry) => {
+let updateRow = (type, idRow, oldData) => {
 	switch (type) {
 		case CONSTANTES.TABLA_TYPE.PARCIAL:
 			return updateParcialRows(idRow, oldData);
@@ -164,10 +164,10 @@ let updateRow = (type, idRow, oldData, carry) => {
 			return updateTecnicaRows(idRow, oldData);
 
 		case CONSTANTES.TABLA_TYPE.EXTRAORDINARIA:
-			return updateExtraordinarioRows(idRow, oldData, carry);
+			return updateExtraordinarioRows(idRow, oldData);
 
 		case CONSTANTES.TABLA_TYPE.COMPLETIVA:
-			return updateCompletivoRows(idRow, oldData, carry);
+			return updateCompletivoRows(idRow, oldData);
 
 		case CONSTANTES.TABLA_TYPE.ASISTENCIA:
 			return updateAsistenciaRows(idRow, oldData);

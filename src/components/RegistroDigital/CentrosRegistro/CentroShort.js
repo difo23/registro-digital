@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
+//import { Container, Row, Col } from 'reactstrap';
 
 class CentroShort extends Component {
 	constructor(props) {
@@ -14,4 +14,5 @@ class CentroShort extends Component {
 		);
 	}
 }
+
 export default CentroShort;

@@ -2,29 +2,40 @@ import BootstrapTable from 'react-bootstrap-table-next';
 import cellEditFactory from 'react-bootstrap-table2-editor';
 import filterFactory from 'react-bootstrap-table2-filter';
 import React, { Component } from 'react';
-import { getNewColumns, getNewRow, updateRow } from './utils';
-import CONSTANTES from '../../../../constantes';
-import FechaAsistencia from './FechaAsistencia';
+import { getNewColumns, getNewRow, updateRow } from '../utils';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import { Button, ButtonGroup } from 'reactstrap';
 
 class TablaCalifAnual extends Component {
-	selectRow = {
-		mode: 'checkbox'
-	};
-
 	constructor(props) {
 		super(props);
+
 		this.state = {
 			rows: [],
 			columns: getNewColumns(props.tablaType),
 			type: props.tablaType,
-			carry: this.props.carry
+			student_cuanty: this.props.student_cuanty
 		};
 
 		this.addRow = this.addRow.bind(this);
 		this.remRow = this.remRow.bind(this);
+		this.createListStudent = this.createListStudent.bind(this);
 	}
+
+	/*TODO:
+	 	Realizar ciclo de agregar estudiantes segun  la prop estudiante 
+		este numero se puede almacenar en el estado
+	*/
+
+	componentWillMount() {
+		this.createListStudent(this.state.student_cuanty);
+	}
+
+	createListStudent = (studentCuanty) => {
+		for (let index = 0; index < studentCuanty; index++) {
+			this.addRow();
+		}
+	};
 
 	addRow = () => {
 		let newId = this.state.rows.length + 1;
@@ -82,15 +93,8 @@ class TablaCalifAnual extends Component {
 	});
 
 	render() {
-		let fecha;
-
-		if (this.state.type === CONSTANTES.TABLA_TYPE.ASISTENCIA) {
-			fecha = <FechaAsistencia />;
-		}
-
 		return (
 			<div>
-				{fecha}
 				<BootstrapTable
 					striped
 					hover

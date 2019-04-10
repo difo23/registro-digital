@@ -6,7 +6,7 @@ import { getNewColumns, getNewRow, updateRow } from './utils';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import { Button, ButtonGroup } from 'reactstrap';
 
-class TablaCalifCompletiva extends Component {
+class TablaCalifExtra extends Component {
 	constructor(props) {
 		super(props);
 
@@ -24,8 +24,8 @@ class TablaCalifCompletiva extends Component {
 		mode: 'checkbox'
 	};
 
-	/*
-		TODO: Realizar ciclo de agregar estudiantes segun la prop carry que no superaron el las calificaciones anuales este numero se puede almacenar en el estado. desde que se monte el componente se deben carga estos nuevos valores.
+	/*TODO:
+     Realizar ciclo de agregar estudiantes segun la prop carry que no superaron el las calificaciones anuales y completivas este numero se puede almacenar en el estado. desde que se monte el componente se deben carga estos nuevos valores.
 	*/
 
 	addRow = () => {
@@ -96,4 +96,4 @@ class TablaCalifCompletiva extends Component {
 	}
 }
 
-export default TablaCalifCompletiva;
+export default TablaCalifExtra;

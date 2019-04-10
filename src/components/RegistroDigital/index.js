@@ -1,6 +1,4 @@
 import React from 'react';
-import CONSTANTES from '../../constantes';
-import { getAsignaturaOptions, getProfesorOptions } from './TablaCalificaciones/Selectores/utils/util';
 import TablaAcademica from './TablaCalificaciones/TablaAcademica';
 import TablaTecnico from './TablaCalificaciones/TablaTecnico';
 import NavBarRegistro from '../NavBarRegistro';
@@ -10,15 +8,14 @@ import Centro from './CentrosRegistro';
 import Estudiante from './EstudiantesRegistro';
 import Libro from './LibrosCalificaciones';
 
-function Bienvenido(params) {
-	return <h1>Bienvenido</h1>;
-}
-
 class RegistroDigital extends React.Component {
 	constructor(props) {
 		super(props);
-
 		//funciones para updates
+	}
+
+	Bienvenido(params) {
+		return <h1>Bienvenido</h1>;
 	}
 
 	render() {
@@ -30,7 +27,7 @@ class RegistroDigital extends React.Component {
 				<Router>
 					<div className={'RegistroDigital'}>
 						{/* <TablaAcademica /> */}
-						<Route exact path="/" component={Bienvenido} />
+						<Route exact path="/" component={this.Bienvenido} />
 						<Route exact path="/centros" component={Centro} />
 						<Route exact path="/libros" component={Libro} />
 						<Route exact path="/estudiantes" component={Estudiante} />

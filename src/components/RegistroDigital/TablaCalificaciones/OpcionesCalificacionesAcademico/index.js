@@ -4,6 +4,7 @@ import TablaRegistro from '../TablaRegistro';
 import React from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
+import TablaCalifAnual from '../TablaRegistro/TablaCalifAnual';
 
 class OpcionesCalificacionesAcademico extends React.Component {
 	constructor(props) {
@@ -13,6 +14,7 @@ class OpcionesCalificacionesAcademico extends React.Component {
 		this.toggle = this.toggle.bind(this);
 		this.state = {
 			activeTab: '0',
+			student_cuanty: 27,
 			carry: [
 				{
 					id: 1,
@@ -106,7 +108,12 @@ class OpcionesCalificacionesAcademico extends React.Component {
 					<TabPane tabId="0">
 						<Row>
 							<Col sm="12">
-								<TablaRegistro tablaType={0} carry={this.state.carry} set={this.setCarry} />
+								<TablaCalifAnual
+									tablaType={0}
+									carry={this.state.carry}
+									set={this.state.setCarry}
+									student_cuanty={this.state.student_cuanty}
+								/>
 							</Col>
 						</Row>
 					</TabPane>

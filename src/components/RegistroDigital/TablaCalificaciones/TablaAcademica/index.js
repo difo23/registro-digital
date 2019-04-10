@@ -11,7 +11,7 @@ class TablaAcademica extends React.Component {
 				<Grid>
 					<Card body>
 						<CardTitle>
-							<h1>CALIFICACIONES MODALIDAD ACADEMICA (SIGLAS CENTRO)</h1>
+							<h2>CALIFICACIONES MODALIDAD ACADEMICA (SIGLAS CENTRO)</h2>
 						</CardTitle>
 						<CardText>
 							<strong>PERIODO (2019-2020): ASIGNATURA SIGLAS - PROFESOR NAME.</strong>

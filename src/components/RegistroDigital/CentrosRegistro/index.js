@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import './index.css';
-import Example from './Formularioa';
-
+import Formulario from './Formulario';
+import PaginationCentro from './PaginationCentro';
+import { Container, Row, Col } from 'reactstrap';
+import CentroShort from './CentroShort';
 
 class Centro extends Component {
 	constructor(props) {
@@ -10,14 +11,19 @@ class Centro extends Component {
 	}
 	render() {
 		return (
-			
-			<div id="bor" >
-			
-			<Example> </Example>
-			
-			
-			</div>
-			
+			<Container>
+				<Row>
+					<Col xs="6" className="block">
+						<Formulario />
+						<br />
+						<PaginationCentro />
+					</Col>
+
+					<Col xs="6" className="blockShort">
+						<CentroShort />
+					</Col>
+				</Row>
+			</Container>
 		);
 	}
 }

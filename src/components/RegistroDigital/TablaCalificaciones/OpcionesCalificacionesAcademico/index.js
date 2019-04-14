@@ -6,6 +6,7 @@ import TablaCalifCompletiva from '../TablaRegistro/TablaCalifCompletiva';
 import TablaCalifExtra from '../TablaRegistro/TablaCalifExtra';
 import TablaAsistencia from '../TablaRegistro/TablasAsistencia';
 import Tab from './Tab';
+//Modificacion para heroku
 
 class OpcionesCalificacionesAcademico extends React.Component {
 	constructor(props) {

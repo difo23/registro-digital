@@ -12,13 +12,20 @@ class OpcionesCalificacionesAcademico extends React.Component {
 		this.state = {
 			activeTab: '0',
 			student_cuanty: 27,
-			carry: []
+			carry: [],
+			carry_extra: []
 		};
 	}
 
 	setCarry = (newCarry) => {
 		this.setState({
 			carry: newCarry
+		});
+	};
+
+	setCarryExtra = (newCarry) => {
+		this.setState({
+			carry_extra: newCarry
 		});
 	};
 
@@ -80,7 +87,7 @@ class OpcionesCalificacionesAcademico extends React.Component {
 					<TabPane tabId="1">
 						<Row>
 							<Col sm="12">
-								<TablaCalifCompletiva tablaType={1} carry={this.state.carry} />
+								<TablaCalifCompletiva tablaType={1} set={this.setCarryExtra} carry={this.state.carry} />
 							</Col>
 						</Row>
 					</TabPane>
@@ -90,7 +97,7 @@ class OpcionesCalificacionesAcademico extends React.Component {
 					<TabPane tabId="2">
 						<Row>
 							<Col sm="12">
-								<TablaCalifExtra tablaType={2} carry={this.state.carry} />
+								<TablaCalifExtra tablaType={2} carry={this.state.carry_extra} />
 							</Col>
 						</Row>
 					</TabPane>

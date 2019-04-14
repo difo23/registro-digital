@@ -4,7 +4,7 @@ import filterFactory from 'react-bootstrap-table2-filter';
 import React, { Component } from 'react';
 import { getNewColumns, getNewRow, updateRow } from '../utils';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
-import { Button, ButtonGroup } from 'reactstrap';
+import { Button } from 'reactstrap';
 
 class TablaCalifCompletiva extends Component {
 	constructor(props) {
@@ -119,10 +119,23 @@ class TablaCalifCompletiva extends Component {
 			let rows = this.state.rows;
 			let newData = updateRow(type, row.id, rows);
 
+			let newCarryExtra = [];
+
+			for (let elementCarry of this.state.carry) {
+				for (let elementNewData of newData) {
+					if (elementCarry.id == elementNewData.id) {
+						if (elementNewData.calificacionFinal < 70) {
+							newCarryExtra.push(elementCarry);
+						}
+					}
+				}
+			}
+			console.log('Carry extra en completiva: ', newCarryExtra);
+			console.log('Estado actualizado en completiva', this.state);
+			this.props.set(newCarryExtra);
 			this.setState({
 				rows: newData
 			});
-			console.log('Estado actualizado en completiva', this.state);
 		}
 	});
 

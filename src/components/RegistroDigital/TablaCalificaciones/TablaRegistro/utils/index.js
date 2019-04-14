@@ -68,17 +68,18 @@ let getNewColumns = (type) => {
 
 //FIXME: a esto se le puede hacer refactoring para no repetir tanto codigo
 
-let updateParcialRows = (id, data) => {
+let updateParcialRows = (row, data) => {
 	let promedio = 0;
-	for (var row of data) {
-		if (row.id === id) {
-			for (const prop in row) {
+	for (var element of data) {
+		if (element.id === row.id) {
+			for (const prop in element) {
 				if (prop !== 'calificacionFinal' && prop !== 'id') {
-					promedio += parseInt(row[prop], 10);
+					element[prop] = row[prop] > 100 ? 0 : row[prop];
+					promedio += parseInt(element[prop], 10);
 				}
 			}
 			promedio = Math.round(promedio / 4);
-			row.calificacionFinal = promedio;
+			element.calificacionFinal = promedio;
 		}
 	}
 
@@ -87,24 +88,23 @@ let updateParcialRows = (id, data) => {
 
 let updateExtraordinarioRows = (id, data) => {
 	let promedio = 0;
-	for (var row of data) {
-		if (row.id === id) {
-			row.setentaPorCientoCPEX = Math.round(row.CPEX * 0.7);
-			//row.treintaPorCientoPCP = Math.round(pcp * 0.3);
+	for (var element of data) {
+		if (element.id === id) {
+			element.setentaPorCientoCPEX = Math.round(element.CPEX * 0.7);
+			//element.treintaPorCientoPCP = Math.round(pcp * 0.3);
 
-			for (const prop in row) {
+			for (const prop in element) {
 				if (prop !== 'calificacionFinal' && prop !== 'id' && prop !== 'CPEX') {
-					promedio += parseInt(row[prop], 10);
+					promedio += parseInt(element[prop], 10);
 				}
 			}
-			row.calificacionFinal = promedio;
+			element.calificacionFinal = promedio;
 		}
 	}
 
 	return data;
 };
 
-//TODO: En caso de necesitar actualizar los datos de estas filas, hasta el momento no.
 let updateSituacionFinalRows = (id, data) => {
 	return data;
 };
@@ -119,17 +119,17 @@ let updateCAPRows = (id, data) => {
 
 let updateCompletivoRows = (id, data) => {
 	let promedio = 0;
-	for (var row of data) {
-		if (row.id === id) {
-			row.cincuentaPorCientoCPC = Math.round(row.CPC * 0.5);
-			//row.cincuetaPorCientoPCP = Math.round(pcp * 0.5);
+	for (var element of data) {
+		if (element.id === id) {
+			element.cincuentaPorCientoCPC = Math.round(element.CPC * 0.5);
+			//element.cincuetaPorCientoPCP = Math.round(pcp * 0.5);
 
-			for (const prop in row) {
+			for (const prop in element) {
 				if (prop !== 'calificacionFinal' && prop !== 'id' && prop !== 'CPC') {
-					promedio += parseInt(row[prop], 10);
+					promedio += parseInt(element[prop], 10);
 				}
 			}
-			row.calificacionFinal = promedio;
+			element.calificacionFinal = promedio;
 		}
 	}
 
@@ -138,17 +138,17 @@ let updateCompletivoRows = (id, data) => {
 
 let updateTecnicaRows = (id, data) => {
 	let promedio = 0;
-	for (var row of data) {
-		if (row.id === id) {
-			for (const prop in row) {
+	for (var element of data) {
+		if (element.id === id) {
+			for (const prop in element) {
 				if (prop !== 'calificacionFinal' && prop !== 'id') {
-					let valor = parseInt(row[prop], 10);
+					let valor = parseInt(element[prop], 10);
 					if (valor > 0) {
 						promedio += valor;
 					}
 				}
 			}
-			row.calificacionFinal = promedio;
+			element.calificacionFinal = promedio;
 		}
 	}
 

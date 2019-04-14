@@ -2,46 +2,108 @@ import BootstrapTable from 'react-bootstrap-table-next';
 import cellEditFactory from 'react-bootstrap-table2-editor';
 import filterFactory from 'react-bootstrap-table2-filter';
 import React, { Component } from 'react';
-import { getNewColumns, getNewRow, updateRow } from './utils';
+import { getNewColumns, getNewRow, updateRow } from '../utils';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import { Button, ButtonGroup } from 'reactstrap';
 
 class TablaCalifCompletiva extends Component {
 	constructor(props) {
 		super(props);
-
-		this.state = {
-			rows: [],
-			columns: getNewColumns(props.tablaType),
-			type: props.tablaType
-		};
-
+		this.state = this.getInitialState();
 		this.addRow = this.addRow.bind(this);
-		this.remRow = this.remRow.bind(this);
 	}
+
+	getInitialState = () => {
+		let state = {
+			rows: [],
+			columns: getNewColumns(this.props.tablaType),
+			type: this.props.tablaType,
+			carry: this.props.carry
+		};
+		console.log('Colocar estado incial:', state);
+		return state;
+	};
 
 	selectRow = {
 		mode: 'checkbox'
 	};
 
-	/*
-		TODO: Realizar ciclo de agregar estudiantes segun la prop carry que no superaron el las calificaciones anuales este numero se puede almacenar en el estado. desde que se monte el componente se deben carga estos nuevos valores.
-	*/
+	//TODO: Crear carry Extraordinario
 
-	addRow = () => {
-		let newId = this.state.rows.length + 1;
-		let row = getNewRow(this.state.type);
-		row.id = newId;
-		let newData = this.state.rows;
-		newData.push(row);
-		this.setState({ rows: newData });
+	rowsUpdateWithCarry = (carry) => {
+		let rows = [];
+
+		for (let index = 0; index < carry.length; index++) {
+			let elementCarry = carry[index];
+			let elementRow = this.state.rows[index];
+			let row;
+
+			if (parseInt(elementCarry.value, 10) < 70) {
+				if (index < this.state.rows.length) {
+					row = getNewRow(this.state.type);
+					row.id = elementCarry.id;
+					row.cincuetaPorCientoPCP = Math.round(parseInt(elementCarry.value, 10) * 0.5);
+					row.CPC = elementRow.CPC;
+
+					row.cincuentaPorCientoCPC = Math.round(parseInt(row.CPC, 10) * 0.5);
+
+					row.calificacionFinal = row.cincuentaPorCientoCPC + row.cincuetaPorCientoPCP;
+				} else {
+					row = this.addRow(elementCarry);
+				}
+			}
+
+			if (row) {
+				rows.push(row);
+			}
+		}
+
+		return rows;
 	};
 
-	remRow = () => {
-		let newData = this.state.rows;
-		let removeRow = newData.pop();
-		console.log(removeRow);
-		this.setState({ rows: newData });
+	componentWillReceiveProps(nextProps) {
+		let carryChange = true;
+
+		if (nextProps.carry.length === this.props.carry.length) {
+			nextProps.carry.forEach((elementNew) => {
+				this.props.carry.forEach((elementOld) => {
+					if (elementNew.id !== elementOld.id || elementOld.value !== elementNew.value) {
+						carryChange = false;
+					}
+				});
+			});
+		}
+
+		console.log('NextProps en Completiva: ', nextProps.carry);
+		let rows = this.rowsUpdateWithCarry(nextProps.carry);
+
+		this.setState({
+			carryChange: carryChange,
+			carry: nextProps.carry,
+			rows: rows
+		});
+	}
+
+	shouldComponentUpdate() {
+		console.log('Should Upadate en completiva: ', this.state);
+		if (this.state.carryChange) {
+			return true;
+		}
+		return true;
+	}
+
+	componentWillMount() {
+		let carry = this.props.carry;
+		let rows = this.rowsUpdateWithCarry(carry);
+		this.setState({ rows: rows });
+		console.log('Actualizacion del estado antes de montar: ', this.state);
+	}
+
+	addRow = (carry) => {
+		let row = getNewRow(this.state.type);
+		row.id = carry.id;
+		row.cincuetaPorCientoPCP = Math.round(parseInt(carry.value, 10) * 0.5);
+		return row;
 	};
 
 	cellEdit = cellEditFactory({
@@ -60,11 +122,12 @@ class TablaCalifCompletiva extends Component {
 			this.setState({
 				rows: newData
 			});
-			console.log('Estado actualizado', this.state);
+			console.log('Estado actualizado en completiva', this.state);
 		}
 	});
 
 	render() {
+		console.log('Dibujando en completiva: ', this.state);
 		return (
 			<div>
 				<BootstrapTable
@@ -79,17 +142,9 @@ class TablaCalifCompletiva extends Component {
 				/>
 
 				<div>
-					<ButtonGroup>
-						<Button color="primary" size="lg" onClick={this.addRow}>
-							+
-						</Button>
-						<Button color="danger" size="lg" onClick={this.remRow}>
-							-
-						</Button>
-						<Button color="success" size="lg">
-							Guardar
-						</Button>
-					</ButtonGroup>
+					<Button color="success" size="lg">
+						Guardar
+					</Button>
 				</div>
 			</div>
 		);

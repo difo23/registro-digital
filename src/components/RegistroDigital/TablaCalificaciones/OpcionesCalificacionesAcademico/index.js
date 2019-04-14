@@ -1,107 +1,64 @@
-//import PropTypes from 'prop-types';
-//import { Tabs, Tab } from 'react-bootstrap';
-import TablaRegistro from '../TablaRegistro';
 import React from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
-import classnames from 'classnames';
+import { Col, Nav, Row, TabContent, TabPane } from 'reactstrap';
+import TablaRegistro from '../TablaRegistro';
 import TablaCalifAnual from '../TablaRegistro/TablaCalifAnual';
+import TablaCalifCompletiva from '../TablaRegistro/TablaCalifCompletiva';
+import TablaCalifExtra from '../TablaRegistro/TablaCalifExtra';
+import Tab from './Tab';
 
 class OpcionesCalificacionesAcademico extends React.Component {
 	constructor(props) {
 		super(props);
-
-		this.setCarry = this.setCarry.bind(this);
-		this.toggle = this.toggle.bind(this);
 		this.state = {
 			activeTab: '0',
 			student_cuanty: 27,
-			carry: [
-				{
-					id: 1,
-					value: 0
-				}
-			]
+			carry: []
 		};
 	}
 
-	setCarry(newCarry) {
+	setCarry = (newCarry) => {
 		this.setState({
 			carry: newCarry
 		});
+	};
+
+	componentWillUpdate() {
+		console.log('Antes de update OptionCaliAca ', this.state);
 	}
 
-	toggle(tab) {
+	toggle = (tab) => {
 		if (this.state.activeTab !== tab) {
 			this.setState({
 				activeTab: tab
 			});
 		}
-	}
+	};
 
 	render() {
 		return (
 			<div>
 				<Nav tabs>
-					<NavItem>
-						<NavLink
-							className={classnames({ active: this.state.activeTab === '0' })}
-							onClick={() => {
-								this.toggle('0');
-							}}
-						>
-							CALIFICACIONES DEL AÑO ESCOLAR
-						</NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink
-							className={classnames({ active: this.state.activeTab === '1' })}
-							onClick={() => {
-								this.toggle('1');
-							}}
-						>
-							CALIFICACIÓN COMPLETIVA
-						</NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink
-							className={classnames({ active: this.state.activeTab === '2' })}
-							onClick={() => {
-								this.toggle('2');
-							}}
-						>
-							CALIFICACIÓN EXTRAORDINARIA
-						</NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink
-							className={classnames({ active: this.state.activeTab === '3' })}
-							onClick={() => {
-								this.toggle('3');
-							}}
-						>
-							SITUACIÓN FINAL
-						</NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink
-							className={classnames({ active: this.state.activeTab === '4' })}
-							onClick={() => {
-								this.toggle('4');
-							}}
-						>
-							CAP
-						</NavLink>
-					</NavItem>{' '}
-					<NavItem>
-						<NavLink
-							className={classnames({ active: this.state.activeTab === '5' })}
-							onClick={() => {
-								this.toggle('5');
-							}}
-						>
-							AS%
-						</NavLink>
-					</NavItem>{' '}
+					<Tab
+						title={'CALIFICACIONES DEL AÑO ESCOLAR'}
+						activeTab={this.state.activeTab}
+						toggle={this.toggle}
+						tab={'0'}
+					/>
+					<Tab
+						title={'CALIFICACIÓN COMPLETIVA'}
+						activeTab={this.state.activeTab}
+						toggle={this.toggle}
+						tab={'1'}
+					/>
+					<Tab
+						title={'CALIFICACIÓN EXTRAORDINARIO'}
+						activeTab={this.state.activeTab}
+						toggle={this.toggle}
+						tab={'2'}
+					/>
+					<Tab title={'SITUACIÓN FINAL'} activeTab={this.state.activeTab} toggle={this.toggle} tab={'3'} />
+					<Tab title={'CAP'} activeTab={this.state.activeTab} toggle={this.toggle} tab={'4'} />
+					<Tab title={'AS%'} activeTab={this.state.activeTab} toggle={this.toggle} tab={'5'} />
 				</Nav>
 
 				<TabContent activeTab={this.state.activeTab}>
@@ -111,7 +68,7 @@ class OpcionesCalificacionesAcademico extends React.Component {
 								<TablaCalifAnual
 									tablaType={0}
 									carry={this.state.carry}
-									set={this.state.setCarry}
+									set={this.setCarry}
 									student_cuanty={this.state.student_cuanty}
 								/>
 							</Col>
@@ -123,7 +80,7 @@ class OpcionesCalificacionesAcademico extends React.Component {
 					<TabPane tabId="1">
 						<Row>
 							<Col sm="12">
-								<TablaRegistro tablaType={1} carry={this.state.carry} set={this.setCarry} />
+								<TablaCalifCompletiva tablaType={1} carry={this.state.carry} />
 							</Col>
 						</Row>
 					</TabPane>
@@ -133,7 +90,7 @@ class OpcionesCalificacionesAcademico extends React.Component {
 					<TabPane tabId="2">
 						<Row>
 							<Col sm="12">
-								<TablaRegistro tablaType={2} carry={this.state.carry} set={this.setCarry} />
+								<TablaCalifExtra tablaType={2} carry={this.state.carry} />
 							</Col>
 						</Row>
 					</TabPane>

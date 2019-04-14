@@ -2,7 +2,7 @@ import BootstrapTable from 'react-bootstrap-table-next';
 import cellEditFactory from 'react-bootstrap-table2-editor';
 import filterFactory from 'react-bootstrap-table2-filter';
 import React, { Component } from 'react';
-import { getNewColumns, getNewRow, updateRow } from './utils';
+import { getNewColumns, getNewRow, updateRow } from '../utils';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import { Button, ButtonGroup } from 'reactstrap';
 
@@ -24,8 +24,7 @@ class TablaCalifExtra extends Component {
 		mode: 'checkbox'
 	};
 
-	/*TODO:
-     Realizar ciclo de agregar estudiantes segun la prop carry que no superaron el las calificaciones anuales y completivas este numero se puede almacenar en el estado. desde que se monte el componente se deben carga estos nuevos valores.
+	/*TODO: Realizar ciclo de agregar estudiantes segun la prop carry que no superaron el las calificaciones anuales y completivas este numero se puede almacenar en el estado. desde que se monte el componente se deben carga estos nuevos valores.
 	*/
 
 	addRow = () => {
@@ -80,12 +79,6 @@ class TablaCalifExtra extends Component {
 
 				<div>
 					<ButtonGroup>
-						<Button color="primary" size="lg" onClick={this.addRow}>
-							+
-						</Button>
-						<Button color="danger" size="lg" onClick={this.remRow}>
-							-
-						</Button>
 						<Button color="success" size="lg">
 							Guardar
 						</Button>

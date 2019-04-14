@@ -12,20 +12,15 @@ class TablaCalifAnual extends Component {
 
 		this.state = {
 			rows: [],
+			carry: [],
 			columns: getNewColumns(props.tablaType),
 			type: props.tablaType,
 			student_cuanty: this.props.student_cuanty
 		};
-
 		this.addRow = this.addRow.bind(this);
 		this.remRow = this.remRow.bind(this);
 		this.createListStudent = this.createListStudent.bind(this);
 	}
-
-	/*TODO:
-	 	Realizar ciclo de agregar estudiantes segun  la prop estudiante 
-		este numero se puede almacenar en el estado
-	*/
 
 	componentWillMount() {
 		this.createListStudent(this.state.student_cuanty);
@@ -65,29 +60,29 @@ class TablaCalifAnual extends Component {
 			let type = this.state.type;
 			let rows = this.state.rows;
 			let newcarry = this.state.carry;
-			let newData = updateRow(type, row.id, rows);
 
-			if (newData[newcarry.length - 1].calificacionFinal < 70) {
-				let index = newcarry.findIndex(function(element) {
-					return element.id === row.id;
+			let newData = updateRow(type, row, rows);
+
+			// if (newcarry.length > 0) {
+			let index = newcarry.findIndex(function(element) {
+				return element.id === row.id;
+			});
+
+			if (index >= 0) {
+				newcarry[index].value = newData[newcarry[index].id - 1].calificacionFinal;
+			} else {
+				newcarry.push({
+					id: row.id,
+					value: newData[row.id - 1].calificacionFinal
 				});
-
-				console.log('Index: ', index);
-
-				if (index >= 0) {
-					newcarry[index].value = newData[newcarry.length - 1].calificacionFinal;
-				} else {
-					newcarry.push({
-						id: row.id,
-						value: row.calificacionFinal
-					});
-				}
 			}
+			//}
 
 			this.setState({
 				rows: newData,
 				carry: newcarry
 			});
+			this.props.set(newcarry);
 			console.log('Estado actualizado', this.state);
 		}
 	});

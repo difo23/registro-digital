@@ -27,4 +27,5 @@ class Centro extends Component {
 		);
 	}
 }
+
 export default Centro;

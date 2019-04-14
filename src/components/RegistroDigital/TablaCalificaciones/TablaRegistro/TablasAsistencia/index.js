@@ -3,19 +3,19 @@ import cellEditFactory from 'react-bootstrap-table2-editor';
 import filterFactory from 'react-bootstrap-table2-filter';
 import React, { Component } from 'react';
 import { getNewColumns, getNewRow, updateRow } from '../utils';
+import FechaAsistencia from '../FechaAsistencia';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
-import { Button, ButtonGroup } from 'reactstrap';
+import { Button } from 'reactstrap';
 
-class TablaCalifAnual extends Component {
+class TablaAsistencia extends Component {
 	constructor(props) {
 		super(props);
-
+		console.log('Tabla de Asistencia: ');
 		this.state = {
 			rows: [],
-			carry: [],
 			columns: getNewColumns(props.tablaType),
 			type: props.tablaType,
-			student_cuanty: this.props.student_cuanty
+			student_cuanty: props.student_cuanty
 		};
 	}
 
@@ -38,16 +38,18 @@ class TablaCalifAnual extends Component {
 		this.setState({ rows: newData });
 	};
 
-	remRow = () => {
-		let newData = this.state.rows;
-		newData.pop();
-		this.setState({ rows: newData });
+	selectRow = {
+		mode: 'checkbox'
+
+		//TODO: Revisar la informacion de https://react-bootstrap-table.github.io/react-bootstrap-table2/storybook/index.html?selectedKind=Row%20Selection&selectedStory=Selection%20Management&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel
+		// selected: [1, 3] // should be a row keys array
 	};
 
 	cellEdit = cellEditFactory({
 		mode: 'click',
 		blurToSave: true,
 		beforeSaveCell: (oldValue, newValue, row, column) => {},
+
 		validator: (newValue, row, column) => {
 			return true;
 		},
@@ -55,36 +57,19 @@ class TablaCalifAnual extends Component {
 		afterSaveCell: (oldValue, newValue, row, column) => {
 			let type = this.state.type;
 			let rows = this.state.rows;
-			let newcarry = this.state.carry;
-
-			let newData = updateRow(type, row, rows);
-
-			// if (newcarry.length > 0) {
-			let index = newcarry.findIndex(function(element) {
-				return element.id === row.id;
-			});
-
-			if (index >= 0) {
-				newcarry[index].value = newData[newcarry[index].id - 1].calificacionFinal;
-			} else {
-				newcarry.push({
-					id: row.id,
-					value: newData[row.id - 1].calificacionFinal
-				});
-			}
-			//}
+			let newData = updateRow(type, row.id, rows);
 
 			this.setState({
-				rows: newData,
-				carry: newcarry
+				rows: newData
 			});
-			this.props.set(newcarry);
+			console.log('Estado actualizado', this.state);
 		}
 	});
 
 	render() {
 		return (
 			<div>
+				<FechaAsistencia />
 				<BootstrapTable
 					striped
 					hover
@@ -97,21 +82,13 @@ class TablaCalifAnual extends Component {
 				/>
 
 				<div>
-					<ButtonGroup>
-						<Button color="primary" size="lg" onClick={this.addRow}>
-							+
-						</Button>
-						<Button color="danger" size="lg" onClick={this.remRow}>
-							-
-						</Button>
-						<Button color="success" size="lg">
-							Guardar
-						</Button>
-					</ButtonGroup>
+					<Button color="success" size="lg">
+						Guardar
+					</Button>
 				</div>
 			</div>
 		);
 	}
 }
 
-export default TablaCalifAnual;
+export default TablaAsistencia;

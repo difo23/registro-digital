@@ -23,7 +23,7 @@ class TablaCalifExtra extends Component {
 			type: this.props.tablaType,
 			carry: this.props.carry
 		};
-		console.log('Colocar estado incial:', state);
+
 		return state;
 	};
 
@@ -80,7 +80,6 @@ class TablaCalifExtra extends Component {
 			});
 		}
 
-		console.log('NextProps en Completiva: ', nextProps.carry);
 		let rows = this.rowsUpdateWithCarry(nextProps.carry);
 
 		this.setState({
@@ -91,7 +90,6 @@ class TablaCalifExtra extends Component {
 	}
 
 	shouldComponentUpdate() {
-		console.log('Should Upadate en completiva: ', this.state);
 		if (this.state.carryChange) {
 			return true;
 		}
@@ -102,7 +100,6 @@ class TablaCalifExtra extends Component {
 		let carry = this.props.carry;
 		let rows = this.rowsUpdateWithCarry(carry);
 		this.setState({ rows: rows });
-		console.log('Actualizacion del estado antes de montar: ', this.state);
 	}
 
 	//tabla
@@ -126,7 +123,6 @@ class TablaCalifExtra extends Component {
 			this.setState({
 				rows: newData
 			});
-			console.log('Estado actualizado', this.state);
 		}
 	});
 

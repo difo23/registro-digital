@@ -4,6 +4,7 @@ import TablaRegistro from '../TablaRegistro';
 import TablaCalifAnual from '../TablaRegistro/TablaCalifAnual';
 import TablaCalifCompletiva from '../TablaRegistro/TablaCalifCompletiva';
 import TablaCalifExtra from '../TablaRegistro/TablaCalifExtra';
+import TablaAsistencia from '../TablaRegistro/TablasAsistencia';
 import Tab from './Tab';
 
 class OpcionesCalificacionesAcademico extends React.Component {
@@ -45,12 +46,7 @@ class OpcionesCalificacionesAcademico extends React.Component {
 		return (
 			<div>
 				<Nav tabs>
-					<Tab
-						title={'CALIFICACIONES DEL AÑO ESCOLAR'}
-						activeTab={this.state.activeTab}
-						toggle={this.toggle}
-						tab={'0'}
-					/>
+					<Tab title={'CALIFICACIONES AÑO'} activeTab={this.state.activeTab} toggle={this.toggle} tab={'0'} />
 					<Tab
 						title={'CALIFICACIÓN COMPLETIVA'}
 						activeTab={this.state.activeTab}
@@ -107,7 +103,7 @@ class OpcionesCalificacionesAcademico extends React.Component {
 					<TabPane tabId="3">
 						<Row>
 							<Col sm="12">
-								<TablaRegistro tablaType={3} />
+								<TablaRegistro tablaType={3} student_cuanty={this.state.student_cuanty} />
 							</Col>
 						</Row>
 					</TabPane>
@@ -127,7 +123,7 @@ class OpcionesCalificacionesAcademico extends React.Component {
 					<TabPane tabId="5">
 						<Row>
 							<Col sm="12">
-								<TablaRegistro tablaType={5} />
+								<TablaAsistencia tablaType={5} student_cuanty={this.state.student_cuanty} />
 							</Col>
 						</Row>
 					</TabPane>

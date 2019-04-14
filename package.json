@@ -2,6 +2,10 @@
 	"name": "frontregistrodigital",
 	"version": "0.1.0",
 	"private": true,
+	"engines": {
+		"npm": "6.4.1",
+		"node": "10.13.0"
+	},
 	"dependencies": {
 		"eslint-config-airbnb": "^17.1.0",
 		"eslint-plugin-import": "^2.14.0",
@@ -32,9 +36,7 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test --env=jsdom",
 		"eject": "react-scripts eject",
-		"dev": "next",
-		"buildnext": "next build",
-		"startnext": "next start"
+		"dev": "next"
 	},
 	"description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
 	"main": "index.js",

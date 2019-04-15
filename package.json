@@ -9,6 +9,7 @@
 	"dependencies": {
 		"ajv-keywords": "^3.2.0",
 		"bootstrap": "^4.3.1",
+		"concurrently": "^4.1.0",
 		"eslint-config-airbnb": "^17.1.0",
 		"eslint-plugin-import": "^2.14.0",
 		"eslint-plugin-jsx-a11y": "^6.1.1",
@@ -36,13 +37,18 @@
 		"serve": "^11.0.0"
 	},
 	"scripts": {
-		"start": "serve -s build",
+		"client-install": "npm install",
+		"start": "node server/server.js",
 		"build": "react-scripts build",
 		"test": "react-scripts test --env=jsdom",
+		"startExpress": "node server/server.js",
+		"serverNodemon": "nodemon server/server.js",
+		"client": "npm start",
+		"dev": "concurrently \"npm run startExpress\" \"npm run devReact\"",
 		"eject": "react-scripts eject",
-		"dev": "react-scripts start"
+		"devReact": "react-scripts start",
+		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build"
 	},
-	"description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
 	"main": "index.js",
 	"devDependencies": {
 		"@babel/core": "^7.3.4",
@@ -50,6 +56,7 @@
 		"babel-core": "^6.26.3",
 		"babel-preset-env": "^1.7.0"
 	},
+	"proxy": "http://localhost:5000",
 	"author": "Lizandro Ramirez",
 	"license": "ISC",
 	"browserslist": [ ">0.2%", "not dead", "not ie <= 11", "not op_mini all" ]

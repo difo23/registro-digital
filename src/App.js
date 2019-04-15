@@ -7,6 +7,18 @@ import RegistroDigital from './components/RegistroDigital';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 
 class App extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {};
+	}
+	connecToServer = () => {
+		fetch('/');
+	};
+
+	componentDidMount() {
+		this.connecToServer();
+	}
+
 	render() {
 		return (
 			<div className="App">

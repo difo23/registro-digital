@@ -7,12 +7,12 @@
 		"node": "10.13.0"
 	},
 	"dependencies": {
+		"ajv-keywords": "^3.2.0",
+		"bootstrap": "^4.3.1",
 		"eslint-config-airbnb": "^17.1.0",
 		"eslint-plugin-import": "^2.14.0",
 		"eslint-plugin-jsx-a11y": "^6.1.1",
 		"eslint-plugin-react": "^7.11.0",
-		"ajv-keywords": "^3.2.0",
-		"bootstrap": "^4.3.1",
 		"jquery": "^3.3.1",
 		"moment": "^2.22.2",
 		"moment-range": "^4.0.1",
@@ -29,14 +29,16 @@
 		"react-input-calendar": "^0.5.3",
 		"react-router-dom": "^5.0.0",
 		"react-scripts": "^2.1.8",
-		"reactstrap": "^7.1.0"
+		"reactstrap": "^7.1.0",
+		"serve": "^11.0.0"
 	},
 	"scripts": {
-		"start": "react-scripts start",
+		"start": "serve -s build",
 		"build": "react-scripts build",
 		"test": "react-scripts test --env=jsdom",
 		"eject": "react-scripts eject",
-		"dev": "next"
+		"dev": "react-scripts start",
+		"heroku-postbuild": "npm run build"
 	},
 	"description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
 	"main": "index.js",

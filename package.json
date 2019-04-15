@@ -36,12 +36,11 @@
 		"serve": "^11.0.0"
 	},
 	"scripts": {
-		"start": "node server.js",
+		"start": "serve -s build",
 		"build": "react-scripts build",
 		"test": "react-scripts test --env=jsdom",
 		"eject": "react-scripts eject",
-		"dev": "react-scripts start",
-		"heroku-postbuild": "npm run build"
+		"dev": "react-scripts start"
 	},
 	"description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
 	"main": "index.js",
@@ -53,10 +52,5 @@
 	},
 	"author": "Lizandro Ramirez",
 	"license": "ISC",
-	"browserslist": [
-		">0.2%",
-		"not dead",
-		"not ie <= 11",
-		"not op_mini all"
-	]
+	"browserslist": [ ">0.2%", "not dead", "not ie <= 11", "not op_mini all" ]
 }

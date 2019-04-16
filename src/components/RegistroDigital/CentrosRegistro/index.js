@@ -18,7 +18,7 @@ class Centro extends Component {
 						<br />
 					</Col>
 
-					<Col xs="16" className="">
+					<Col xs="6" className="">
 						<CentroShort />
 					</Col>
 				</Row>

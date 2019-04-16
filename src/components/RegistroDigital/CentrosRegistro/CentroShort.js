@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { CardImg, CustomInput, Row, Col } from 'reactstrap';
-
+import PaginationCentro from './PaginationCentro';
 import { Button, ButtonGroup } from 'reactstrap';
 import logo from './logo.png';
 
@@ -47,9 +47,11 @@ class CentroShort extends Component {
 									<CardImg src={logo} alt="Card image cap" />
 									<CustomInput
 										type="switch"
-										id="exampleCustomSwitch"
-										name="customSwitch"
+										id="CustomSwitch"
+										name="customSwitchCentro"
 										label="Active"
+										valid={true}
+										checked={true}
 									/>
 								</Col>
 							</Row>
@@ -63,18 +65,22 @@ class CentroShort extends Component {
 							<p>{this.state.info.distritiCentro}</p>
 						</div>
 
-						<div className="card-fooder, btn-light">
+						<div className="card-fooder">
 							<ButtonGroup>
-								<Button color="primary" size="lg">
-									Show
+								<Button color="primary" href="/libros" size="lg">
+									Libros
 								</Button>
 								<Button color="danger" size="lg">
-									Edit
+									Editar
 								</Button>
 								<Button color="success" size="lg">
-									Delete
+									Borrar
 								</Button>
 							</ButtonGroup>
+						</div>
+						<br />
+						<div>
+							<PaginationCentro />
 						</div>
 					</div>
 				</div>

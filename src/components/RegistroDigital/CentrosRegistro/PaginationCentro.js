@@ -37,10 +37,13 @@ class PaginationCentro extends React.Component {
 						<PaginationLink href="#">8</PaginationLink>
 					</PaginationItem>
 					<PaginationItem>
-						<PaginationLink next href="#" />
+						<PaginationLink href="#">9</PaginationLink>
 					</PaginationItem>
 					<PaginationItem>
-						<PaginationLink last href="#" />
+						<PaginationLink href="#">10</PaginationLink>
+					</PaginationItem>
+					<PaginationItem>
+						<PaginationLink next href="#" />
 					</PaginationItem>
 				</Pagination>
 			</div>

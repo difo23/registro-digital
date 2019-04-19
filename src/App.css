@@ -1,43 +1,25 @@
 .App {
-  text-align: center;
-  width: 100%;
+	text-align: center;
+	width: 100%;
 }
-/*TODO necesito trabajar el estilo del component Registro*/
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+/*TODO: necesito trabajar el estilo del component Registro*/
 
-.App-header {
-  background-color: #1a6173;
-  width: 100%;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  /*from { transform: rotate(0deg); }*/
-  /*to { transform: rotate(360deg); }*/
-}
 .RegistroDigital {
-  width: 98%;
-  padding: 15px;
-  margin-left: auto;
-  margin-right:auto;
-  margin-top: 30px;
-  box-shadow: 20px 11px 96px -1px rgba(0,0,0,0.41);
+	width: 98%;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
 }
 
+.blockShort {
+	border: 2px solid rgb(182, 67, 67);
+	max-width: 45%;
+	margin-inline-end: auto;
+	margin-block-end: auto;
+}
+.block {
+	border: 1px solid #000;
 
-
-
-
+	margin-inline-end: auto;
+}

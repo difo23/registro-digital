@@ -2,13 +2,18 @@
 
 # dependencies
 /node_modules
-
+.idea
+.next
 # testing
 /coverage
 
 # production
-/build
 
+
+src/*
+public/*
+build/static/css/*.map
+build/static/js/*.map
 # misc
 .DS_Store
 .env.local

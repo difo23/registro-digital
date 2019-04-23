@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { CardImg, CustomInput, Row, Col } from 'reactstrap';
 import PaginationCentro from './PaginationCentro';
 import { Button, ButtonGroup } from 'reactstrap';
-import logo from './logo.png';
+import logo from './logo.jpeg';
 
 // ALGUNAS IMFORMACIONES DE PARTE DEL CREADOR DEL CODIGO  JERLY
 
@@ -13,7 +13,6 @@ import logo from './logo.png';
 // NO TIENE FUCIONALIDAD TODAVIA
 // LE FALTA COLOCARLE EL ESTILO, YA QUE HAY QUE ESPERAR QUE LO DEMAS DESARROLLADORES DEL APP TERMINEN PAR ELEGIR  EL ESTILO QUE TENDRA LA APP COMPLETA COMO EL COLOR ECT...
 // SE NECESITAN HACER UNOS CUANTOS AJUSTES DE POCISIONAMIENTO
-// CREE UN ARCHIVO TODOS.JSON PARA SIMULAR LOS DATOS QUE BIENEN POR DEFECTO  DEL CEMAS
 // SI NO ENTIENDEN ALGO DEL CODIGO LE PREGUNTAN A JERLY QUE FUE QUIEN LO DESARROLLO
 
 // ESA SON LAS IMFORMACIONES
@@ -56,7 +55,7 @@ class CentroShort extends Component {
 								</Col>
 							</Row>
 						</div>
-						{/*AQUI SE LE LLAMAN A LOS DATOS QUE SE ENCUENTRAN EN EL ARCHIVO TODO.JSON */}
+
 						<div className="card-body">
 							<p>{this.state.info.siglas}</p>
 							<p>{this.state.info.telefono}</p>

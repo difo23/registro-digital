@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-
+import Formulario from './form';
+import { Container, Row, Col } from 'reactstrap';
+import PaginationLibro from './paginationLibro';
+import Carta  from './carta';
 class Libro extends Component {
 	constructor(props) {
 		super(props);
@@ -8,9 +11,27 @@ class Libro extends Component {
 
 	render() {
 		return (
-			<div>
-				<h1> Esta interfaz corresponde a los Libros , esta siendo hecha por vagos. </h1>
-			</div>
+			<Container>
+				<Row>
+					<Col xs="6" className="block">
+				<Formulario/>
+						
+						<br />
+						<PaginationLibro/>
+					</Col>
+
+					<Col xs="6" className="">
+						<Carta/>
+					</Col>
+				</Row>
+				
+			</Container>
+			
+			
+			
+				
+				
+							
 		);
 	}
 }

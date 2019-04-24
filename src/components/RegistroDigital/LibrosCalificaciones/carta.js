@@ -4,16 +4,14 @@ import PaginationLibro from './paginationLibro';
 import { Button, ButtonGroup } from 'reactstrap';
 import cemas from './cemas.jpg';
 
-
-
 class CentroShort extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			datos: {
 				libro: '1A',
-        ListaDeEstudiantes: 'Lista de Estudiantes',
-        ListaDeAsignaturas: ' Lista de Asignaturas'
+				ListaDeEstudiantes: 'Lista de Estudiantes',
+				ListaDeAsignaturas: ' Lista de Asignaturas'
 			}
 		};
 	}
@@ -41,21 +39,20 @@ class CentroShort extends Component {
 								</Col>
 							</Row>
 						</div>
-						
-						<div className="card-body">
-            <ButtonGroup>
-        <Button href="/asignaturas">Asignaturas</Button>
-        <Button>Editar</Button>
-        <Button href="/EstudiantesRegistro">Estudiantes</Button>
-        <Button>Eliminar</Button>
-        
-      </ButtonGroup>
-            <hr/>
 
-            {this.state.datos.ListaDeEstudiantes}
-            <hr/>
-            <PaginationLibro />
-            <ButtonGroup>
+						<div className="card-body">
+							<ButtonGroup>
+								<Button href="/asignaturas">Asignaturas</Button>
+								<Button href="/EstudiantesRegistro">Estudiantes</Button>
+								<Button>Editar</Button>
+								<Button>Eliminar</Button>
+							</ButtonGroup>
+							<hr />
+
+							{this.state.datos.ListaDeEstudiantes}
+							<hr />
+							<PaginationLibro />
+							<ButtonGroup>
 								<Button color="primary" href="#" size="lg">
 									Reporte
 								</Button>
@@ -69,13 +66,12 @@ class CentroShort extends Component {
 						</div>
 
 						<div className="card-fooder">
-            <hr/>
-            {this.state.datos.ListaDeAsignaturas}
-            <br/>
-            <hr/>
+							<hr />
+							{this.state.datos.ListaDeAsignaturas}
+							<br />
+							<hr />
 
 							<ButtonGroup>
-
 								<Button color="primary" href="#" size="lg">
 									Reporte
 								</Button>

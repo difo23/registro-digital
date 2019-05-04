@@ -3,27 +3,32 @@ import { CardImg, CustomInput, Row, Col } from 'reactstrap';
 import PaginationLibro from './paginationLibro';
 import { Button, ButtonGroup } from 'reactstrap';
 import cemas from './cemas.jpg';
+import {prueba} from './prueba.json';
 
-class CentroShort extends Component {
+class Carta extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			datos: {
-				libro: '1A',
-				ListaDeEstudiantes: 'Lista de Estudiantes',
-				ListaDeAsignaturas: ' Lista de Asignaturas'
-			}
+			prueba
 		};
+		this.handleAddTodo= this.handleAddTodo.bind(this);
+	}
+	handleAddTodo(todo){
+		this.setState({
+		prueba:	[...this.setState.prueba,todo]
+
+		})
+
 	}
 	render() {
-		// AQUI SE COMIENZA A CREAR EL CARD DEL  CEMAS
+		
 
 		return (
 			<div className="container">
-				<h2>Manuel Acevedo Serrano </h2>
+				<h2>{this.state.prueba.libro} </h2>
 				<div className="mt-6">
 					<div className="card  mt-4">
-						<div className="card-header">{this.state.datos.libro}</div>
+						<div className="card-header">{this.state.prueba.libro}</div>
 						<div className=" card-body">
 							<Row>
 								<Col sm="12" md={{ size: 6, offset: 3 }}>
@@ -49,7 +54,7 @@ class CentroShort extends Component {
 							</ButtonGroup>
 							<hr />
 
-							{this.state.datos.ListaDeEstudiantes}
+							{this.state.prueba.ListaDeEstudiantes}
 							<hr />
 							<PaginationLibro />
 							<ButtonGroup>
@@ -67,7 +72,7 @@ class CentroShort extends Component {
 
 						<div className="card-fooder">
 							<hr />
-							{this.state.datos.ListaDeAsignaturas}
+							{this.state.prueba.ListaDeAsignaturas}
 							<br />
 							<hr />
 
@@ -94,4 +99,4 @@ class CentroShort extends Component {
 	}
 }
 
-export default CentroShort;
+export default Carta;

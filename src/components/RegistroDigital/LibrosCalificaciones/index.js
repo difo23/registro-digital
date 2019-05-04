@@ -20,7 +20,7 @@ class Libro extends Component {
 						<PaginationLibro/>
 					</Col>
 
-					<Col xs="6" className="">
+					<Col xs="6" className="block">
 						<Carta/>
 					</Col>
 				</Row>

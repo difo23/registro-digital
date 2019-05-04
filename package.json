@@ -44,7 +44,7 @@
 		"startExpress": "node server/server.js",
 		"serverNodemon": "nodemon server/server.js",
 		"client": "npm start",
-		"dev": "concurrently \"npm run startExpress\" \"npm run devReact\"",
+		"dev": "concurrently \"npm run startExpress\" \"npm run edvReact\"",
 		"eject": "react-scripts eject",
 		"devReact": "react-scripts start",
 		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build"
